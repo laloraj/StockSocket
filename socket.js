@@ -166,6 +166,7 @@ function restart() {
  * Method that starts a Websocket connection with Yahoo Finance for the tickers in the watchlist
  */
 function activate() {
+	ws.removeAllListeners()
 	ws = new WebSocket("wss://streamer.finance.yahoo.com");
 
 	ws.onopen = function open() {
